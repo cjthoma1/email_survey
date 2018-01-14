@@ -12,7 +12,6 @@ const SurveyNew = () => <h2>SurveyNew</h2>;
 
   componentDidMount(){
     this.props.fetchUser();
-
   }
   render() {
     return (
