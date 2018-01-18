@@ -20,7 +20,7 @@ const Dashboard = () => <h2>Dashboard</h2>;
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />
-            <Route exact path="/survey/new" component={SurveyNew} />
+            <Route exact path="/surveys/new" component={SurveyNew} />
           </div>
         </BrowserRouter>
     );
