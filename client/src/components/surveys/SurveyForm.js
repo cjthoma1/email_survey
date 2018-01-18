@@ -5,12 +5,12 @@ import {Link} from 'react-router-dom';
 import {reduxForm, Field} from "redux-form";
 import SurveyField from './SurveyField';
 import validateEmails from '../../utils/validateEmails.js';
-import FIELDS from './formFields';
+import formFields from './formFields';
 
 class SurveyForm extends Component {
   renderFields() {
 
-    return _.map(FIELDS, ({label, name}) => {
+    return _.map(formFields, ({label, name}) => {
       return (<Field
         key={name}
         type="text"
@@ -39,7 +39,7 @@ class SurveyForm extends Component {
 
 const validate = values => {
   const errors = {};
-  _.each(FIELDS, ({name, label}) => {
+  _.each(formFields, ({name, label}) => {
 
     errors.emails = validateEmails(values.emails || '');
 
