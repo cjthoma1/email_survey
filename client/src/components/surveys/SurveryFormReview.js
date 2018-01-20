@@ -21,14 +21,14 @@ const SurveryFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     <div>
       <h5>Please Confirm your entries</h5>
       {reviewFields}
-      <button className="yellow darken-3 btn-flat" onClick={onCancel}>
+      <button className="yellow darken-3 btn-flat white-text" onClick={onCancel}>
         Back
       </button>
       <button
-        className="green btn-flat right"
+        className="green white-text btn-flat right"
         onClick={() => submitSurvey(formValues, history)}
       >
-        Send Survey <i className="material-icons right">email</i>
+        Send Survey <i className="material-icons white-text right">email</i>
       </button>
     </div>
   );
@@ -37,6 +37,7 @@ const SurveryFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 function mapStateToProps(state) {
   return { formValues: state.form.surveyForm.values };
 }
-
+//withRouter provided in order to pass props.history to SurveyFormReviw
+//SurviewFormReview then passes props.history on to the submitSurvey action method
 export default connect(mapStateToProps, actions)(withRouter(SurveryFormReview));
 
