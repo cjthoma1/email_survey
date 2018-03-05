@@ -1,5 +1,5 @@
 function localtunnel {
-    lt -s craywebhook12c12t --port 5000
+    lt -s craywebhook12c12t12 --port 5000
 }
 
 until localtunnel; do
