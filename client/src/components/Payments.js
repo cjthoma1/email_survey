@@ -4,7 +4,8 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 class Payments extends Component{
-    render(){        
+    render(){    
+        console.log('Pub Key', process.env.REACT_APP_STRIPE_KEY);    
         return(
             <StripeCheckout
             name="Emaily"
