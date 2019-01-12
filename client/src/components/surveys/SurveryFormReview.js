@@ -37,7 +37,7 @@ const SurveryFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 function mapStateToProps(state) {
   return { formValues: state.form.surveyForm.values };
 }
-//withRouter provided in order to pass props.history to SurveyFormReviw
-//SurviewFormReview then passes props.history on to the submitSurvey action method
+// withRouter provided in order to pass props.history to SurveyFormReviw
+// SurviewFormReview then passes props.history on to the submitSurvey action method
 export default connect(mapStateToProps, actions)(withRouter(SurveryFormReview));
 
